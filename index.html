@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Hockey Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hud">
+        <div class="score-card">
+          <span class="label" id="leftLabel">Player 1</span>
+          <span class="value" id="playerScore">0</span>
+        </div>
+        <h1>Air Hockey</h1>
+        <div class="score-card">
+          <span class="label" id="rightLabel">Computer</span>
+          <span class="value" id="aiScore">0</span>
+        </div>
+      </header>
+
+      <section class="arena-wrap">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Air Hockey Game"></canvas>
+      </section>
+
+      <section class="controls">
+        <div class="panel">
+          <label for="modeSelect">Mode</label>
+          <select id="modeSelect">
+            <option value="vsComputer">Player vs Computer</option>
+            <option value="vsFriend">2 Players (Local)</option>
+          </select>
+        </div>
+        <div class="panel" id="difficultyPanel">
+          <label for="difficultySelect">Difficulty</label>
+          <select id="difficultySelect">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <p id="controlHint">Move mouse/finger to control your paddle. First to <strong>7</strong> wins.</p>
+        <button id="restartBtn" type="button">Restart Match</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
